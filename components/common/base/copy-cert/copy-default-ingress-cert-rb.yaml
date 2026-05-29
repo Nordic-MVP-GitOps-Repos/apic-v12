@@ -5,6 +5,7 @@ metadata:
 subjects:
   - kind: ServiceAccount
     name: copy-default-ingress-cert-sa
+    namespace: apic
 roleRef:
   apiGroup: rbac.authorization.k8s.io
   kind: ClusterRole
