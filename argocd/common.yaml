@@ -15,8 +15,6 @@ spec:
   source:
     path: ./components/common/base
   syncPolicy:
-    syncOptions:
-      - ServerSideApply=true
     automated:
       prune: true
       selfHeal: true
