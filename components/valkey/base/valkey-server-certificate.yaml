@@ -14,7 +14,6 @@ spec:
   usages:
     - digital signature
     - key encipherment
-    - server auth
   dnsNames:
     - valkey.datapower-nano-system.svc.cluster.local
     - valkey.datapower-nano-system.svc
