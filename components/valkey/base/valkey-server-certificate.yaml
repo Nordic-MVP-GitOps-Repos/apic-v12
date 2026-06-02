@@ -1,0 +1,36 @@
+# Server Certificate for Valkey
+apiVersion: cert-manager.io/v1
+kind: Certificate
+metadata:
+  name: valkey-tls
+spec:
+  secretTemplate:
+    annotations:
+      cert-utils-operator.redhat-cop.io/generate-cert-info: "true"
+  secretName: valkey-tls-secret
+  duration: 8760h  # 365 days
+  renewBefore: 720h  # 30 days
+  commonName: valkey.datapower-nano-system.svc.cluster.local
+  usages:
+    - digital signature
+    - key encipherment
+    - server auth
+  dnsNames:
+    - valkey.datapower-nano-system.svc.cluster.local
+    - valkey.datapower-nano-system.svc
+    - valkey-headless.datapower-nano-system.svc.cluster.local
+    - valkey-headless.datapower-nano-system.svc
+    - valkey-headless
+    - valkey
+    - valkey-leader-headless.datapower-nano-system.svc.cluster.local
+    - valkey-leader-headless.datapower-nano-system.svc
+    - valkey-leader-headless
+    - valkey-leader.datapower-nano-system.svc.cluster.local
+    - valkey-leader.datapower-nano-system.svc
+    - valkey-leader
+  privateKey:
+    algorithm: RSA
+    size: 2048
+  issuerRef:
+    name: valkey-issuer
+    kind: Issuer
