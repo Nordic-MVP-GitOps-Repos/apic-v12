@@ -20,5 +20,6 @@ rules:
       - operator.autoscaling.openshift.io
       - management.apiconnect.ibm.com
       - gateway.apiconnect.ibm.com
+      - valkey.datapower.ibm.com
     resources:
       - '*'
