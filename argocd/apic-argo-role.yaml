@@ -6,19 +6,20 @@ rules:
   - verbs:
       - '*'
     apiGroups:
-      - apiconnect.ibm.com
+      - autoscaling
+      - apps
+      - batch
       - cert-manager.io
       - tekton.dev
-      - datapower.ibm.com
-      - autoscaling
       - logging.openshift.io
+      - operator.autoscaling.openshift.io
       - networking.k8s.io
       - monitoring.coreos.com
       - operator.ibm.com
-      - apps
-      - batch
-      - operator.autoscaling.openshift.io
+      - apiconnect.ibm.com
+      - datapower.ibm.com
       - management.apiconnect.ibm.com
+      - nanogateway.apiconnect.ibm.com
       - gateway.apiconnect.ibm.com
       - valkey.datapower.ibm.com
     resources:
