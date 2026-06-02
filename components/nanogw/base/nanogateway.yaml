@@ -25,7 +25,7 @@ spec:
         secretName: gateway-proxy-endpoint
   redis:
     hosts:
-    - valkey.datapower-nano-system.svc.cluster.local
+    - valkey.apic.svc.cluster.local
     port: 6379
     mode: standalone
     credential:

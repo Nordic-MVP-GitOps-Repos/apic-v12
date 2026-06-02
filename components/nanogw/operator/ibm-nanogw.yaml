@@ -1,13 +1,8 @@
 apiVersion: v1
-kind: Namespace
-metadata:
-  name: datapower-nano-system
----
-apiVersion: v1
 kind: ServiceAccount
 metadata:
   name: datapower-nano-operator
-  namespace: datapower-nano-system
+  namespace: apic
 ---
 apiVersion: rbac.authorization.k8s.io/v1
 kind: ClusterRole
@@ -164,13 +159,13 @@ roleRef:
 subjects:
   - kind: ServiceAccount
     name: datapower-nano-operator
-    namespace: datapower-nano-system
+    namespace: apic
 ---
 apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: datapower-nano-operator
-  namespace: datapower-nano-system
+  namespace: apic
 spec:
   replicas: 1
   selector:

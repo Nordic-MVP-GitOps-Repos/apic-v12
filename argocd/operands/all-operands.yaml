@@ -13,10 +13,10 @@ spec:
           namespace: apic
           sync-wave: "300"
         - name: valkey
-          namespace: datapower-nano-system
+          namespace: apic
           sync-wave: "300"
         - name: nanogw
-          namespace: datapower-nano-system
+          namespace: apic
           sync-wave: "300"
   template:
     metadata:
