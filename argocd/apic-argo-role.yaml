@@ -20,6 +20,7 @@ rules:
       - datapower.ibm.com
       - management.apiconnect.ibm.com
       - nanogateway.apiconnect.ibm.com
+      - nano.datapower.ibm.com
       - gateway.apiconnect.ibm.com
       - valkey.datapower.ibm.com
     resources:
