@@ -31,3 +31,12 @@ spec:
     key: "tls.key"
     secret:
       secretName: "valkey-tls-secret"
+  storage:
+    volumeClaimTemplate:
+      spec:
+        storageClassName: ocs-storagecluster-ceph-rbd
+        accessModes:
+          - ReadWriteOnce
+        resources:
+          requests:
+            storage: 1Gi
